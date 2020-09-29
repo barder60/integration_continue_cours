@@ -1,0 +1,17 @@
+{
+  "name": "tp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.4.2",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node_modules/.bin/jest --forceExit"
+  },
+  "author": "",
+  "license": "ISC"
+}
