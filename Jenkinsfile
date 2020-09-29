@@ -5,12 +5,11 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                git https://github.com/barder60/integration_continue_cours
-                sh 'npm init'
-                sh 'npm install jest'
+                git 'https://github.com/barder60/integration_continue_cours'
+                sh 'npm install'
             }
         stage('Test') {
-                sh 'npm run node_modules/.bin/jest --forceExit'
+                sh 'npm test'
             }
         }
     }
