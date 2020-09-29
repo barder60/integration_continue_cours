@@ -7,6 +7,12 @@ pipeline {
         git 'https://github.com/barder60/integration_continue_cours'
       }
     }
+
+    stage('Install dependencies') {
+      steps {
+         bat 'npm install'
+      }
+    }
      
     stage('Test') {
       steps {
