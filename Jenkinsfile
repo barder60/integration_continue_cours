@@ -1,11 +1,15 @@
 pipeline {
-    agent {
-        docker { image 'node:14-alpine' }
-    }
+    agent : any
+    tools {nodejs "node"}
     stages {
-        stage('Test') {
+        stage('Build') { 
             steps {
-                sh 'node --version'
+                git https://github.com/barder60/integration_continue_cours
+                sh 'npm init'
+                sh 'npm install jest'
+            }
+        stage('Test') {
+                sh 'npm run node_modules/.bin/jest --forceExit'
             }
         }
     }
