@@ -11,7 +11,7 @@ describe('Test Human', () => {
                 expect(err.message).toEqual('no firstName provided')
             }
         })
-        it('should throw error age too low', () => {
+        /*it('should throw error age too low', () => {
             expect.assertions(1)
             const human = new Human('toto@hotmail.com', 'toto','tata', 10)
             try {
@@ -19,7 +19,7 @@ describe('Test Human', () => {
               } catch (err) {
                 expect(err.message).toEqual('age : 10 is too low')
             }
-        })
+        })*/
     })
     describe('Success Cases', ()=> {
 
