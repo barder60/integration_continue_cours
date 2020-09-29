@@ -1,10 +1,7 @@
 pipeline {
   agent any
-    
   tools {nodejs "node"}
-    
   stages {
-        
     stage('Cloning Git') {
       steps {
         git 'https://github.com/barder60/integration_continue_cours'
@@ -13,13 +10,13 @@ pipeline {
         
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        bash 'npm install'
       }
     }
      
     stage('Test') {
       steps {
-         sh 'npm test'
+         bash 'npm test'
       }
     }      
   }
